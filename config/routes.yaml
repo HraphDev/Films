@@ -1,0 +1,106 @@
+# General routes
+app_home:
+    path: /
+    controller: App\Controller\HomeController::index
+
+# Authentication Routes
+app_login:
+    path: /login
+    controller: App\Controller\SecurityController::login
+
+app_logout:
+    path: /logout
+    controller: App\Controller\SecurityController::logout
+
+# Admin Routes
+admin_dashboard:
+    path: /admin
+    controller: App\Controller\AdminController::dashboard
+    # Ensure that only admins can access this route
+    requirements:
+        _role: ROLE_ADMIN
+
+# Additional Routes
+about:
+    path: /about
+    controller: App\Controller\PageController::about
+
+contact:
+    path: /contact
+    controller: App\Controller\PageController::contact
+
+# Movies Routes (you can adjust or add more specific routes as needed)
+movies:
+    path: /movies
+    controller: App\Controller\MovieController::index
+
+action_movies:
+    path: /movies/action
+    controller: App\Controller\MovieController::action
+
+comedy_movies:
+    path: /movies/comedy
+    controller: App\Controller\MovieController::comedy
+
+drama_movies:
+    path: /movies/drama
+    controller: App\Controller\MovieController::drama
+
+horror_movies:
+    path: /movies/horror
+    controller: App\Controller\MovieController::horror
+
+# Cartoons Routes (similarly, you can extend these)
+cartoons:
+    path: /cartoons
+    controller: App\Controller\CartoonController::index
+
+kids_cartoons:
+    path: /cartoons/kids
+    controller: App\Controller\CartoonController::kids
+
+family_cartoons:
+    path: /cartoons/family
+    controller: App\Controller\CartoonController::family
+
+animated_series:
+    path: /cartoons/animated-series
+    controller: App\Controller\CartoonController::animatedSeries
+
+# Series Routes
+series:
+    path: /series
+    controller: App\Controller\SeriesController::index
+
+thriller_series:
+    path: /series/thriller
+    controller: App\Controller\SeriesController::thriller
+
+romance_series:
+    path: /series/romance
+    controller: App\Controller\SeriesController::romance
+
+sci_fi_series:
+    path: /series/sci-fi
+    controller: App\Controller\SeriesController::sciFi
+
+documentaries_series:
+    path: /series/documentaries
+    controller: App\Controller\SeriesController::documentaries
+
+# Team and Contact Routes
+team:
+    path: /team
+    controller: App\Controller\TeamController::index
+
+# Static Routes
+terms:
+    path: /terms
+    controller: App\Controller\PageController::terms
+
+privacy:
+    path: /privacy
+    controller: App\Controller\PageController::privacy
+app_contact:
+    path: /contact
+    controller: App\Controller\ContactController::privacy

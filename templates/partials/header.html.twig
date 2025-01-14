@@ -1,0 +1,73 @@
+<header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+        <a href="{{ path('app_home') }}" class="logo d-flex align-items-center me-auto">
+            <h1 class="sitename">FlickFusion</h1>
+            {# Flick: A casual and popular term for movies, representing the streaming of films, cartoons, and videos.
+Fusion: Signifying the blending or coming together of different types of entertainment (movies, cartoons, shows, etc.) in one platform. #}
+        </a>
+
+      <nav id="navmenu" class="navmenu">
+    <ul>
+        <li><a href="#hero" class="active">Home</a></li>
+        <li><a href="#about" class="active">About</a></li>
+        <li class="dropdown">
+            <a href="#movies" class="dropdown-toggle">Movies </i></a>
+            <ul class="dropdown-menu">
+                <li><a href="#action">Action</a></li>
+                <li><a href="#comedy">Comedy</a></li>
+                <li><a href="#drama">Drama</a></li>
+                <li><a href="#horror">Horror</a></li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="#cartoons" class="dropdown-toggle">Cartoons </i></a>
+            <ul class="dropdown-menu">
+                <li><a href="#kids">Kids</a></li>
+                <li><a href="#family">Family</a></li>
+                <li><a href="#animated-series">Animated Series</a></li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="#series" class="dropdown-toggle">Series</i></a>
+            <ul class="dropdown-menu">
+                <li><a href="#thriller">Thriller</a></li>
+                <li><a href="#romance">Romance</a></li>
+                <li><a href="#sci-fi">Sci-Fi</a></li>
+                <li><a href="#documentaries">Documentaries</a></li>
+            </ul>
+        </li>
+        <li><a href="#team">Team</a></li>
+<li><a href="{{ path('app_contact') }}">Contact</a></li>
+    </ul>
+    <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+</nav>
+<a class="cta-btn" href="#" data-bs-toggle="modal" data-bs-target="#signInModal">Connect</a>
+
+<!-- Sign In Modal -->
+<div class="modal fade" id="signInModal" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="signInModalLabel">Sign In</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="{{ path('app_login') }}" method="post">
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="_username" required>
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" name="_password" required>
+          </div>
+          <div class="d-grid">
+            <button type="submit" class="btn btn-primary">Sign In</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+</header>
